@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Miss Mahi!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff4f87;--gold:#ffd477;--ink:#17131d;--muted:#b9afbf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#100e15;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 15%,#76234b55,transparent 32%),radial-gradient(circle at 85% 75%,#a66a2550,transparent 30%);z-index:-1}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 7%;border-bottom:1px solid #ffffff12;position:absolute;top:0;width:100%;z-index:5}
+.logo{font-weight:700;letter-spacing:2px;color:var(--gold)}nav span:last-child{font-size:12px;letter-spacing:2px;color:#e8dce8}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px;padding:125px 9% 70px;max-width:1450px;margin:auto}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:4px;font-size:12px;font-weight:700}
+h1{font:800 clamp(55px,7vw,100px)/.98 'Playfair Display',serif;margin:22px 0}
+h1 em{color:var(--pink);font-style:normal;display:block}
+.hero p{color:#d0c5d2;line-height:1.8;max-width:510px;font-size:17px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{border:0;border-radius:999px;padding:15px 23px;font-weight:700;cursor:pointer;font-size:14px;transition:.25s}
+.btn-primary{background:linear-gradient(110deg,var(--pink),#ff8d72);color:white;box-shadow:0 10px 35px #ff4f8740}.btn-ghost{background:#ffffff12;color:white;border:1px solid #ffffff30}.btn:hover{transform:translateY(-3px)}
+.hero-photo{height:590px;position:relative;border-radius:48% 48% 22px 22px;overflow:hidden;border:1px solid #ffffff35;box-shadow:0 25px 90px #0008}
+.hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+.photo-tag{position:absolute;bottom:22px;left:22px;background:#17131dcc;backdrop-filter:blur(10px);padding:13px 17px;border-radius:12px;font-size:13px}
+.photo-tag strong{display:block;color:var(--gold);font-size:16px;margin-bottom:3px}
+section{padding:90px 8%;max-width:1300px;margin:auto}
+.section-head{text-align:center;margin-bottom:45px}.section-head h2{font:700 clamp(34px,4vw,54px) 'Playfair Display',serif;margin:12px 0}.section-head p{color:var(--muted)}
+.gallery{display:grid;grid-template-columns:1.1fr .9fr 1fr;gap:18px}
+.gallery figure{margin:0;height:320px;border-radius:18px;overflow:hidden;position:relative;background:#29232e}
+.gallery figure:nth-child(2){margin-top:35px}.gallery figure:nth-child(3){margin-top:70px}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:brightness(.8)}
+.gallery figure:hover img{transform:scale(1.06)}
+.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:35px 18px 18px;background:linear-gradient(transparent,#09070bd9);font-weight:700}
+.note{max-width:850px;margin:25px auto 0;text-align:center;padding:35px;border:1px solid #ffffff20;border-radius:22px;background:#ffffff08}
+.note p{font-size:18px;line-height:1.9;color:#e3d9e5;margin:0}.note strong{color:var(--gold)}
+.birthday{padding-top:60px;padding-bottom:110px;text-align:center}
+.cake-stage{margin:40px auto 25px;width:min(440px,90vw);height:310px;position:relative;display:flex;align-items:flex-end;justify-content:center}
+.cake{position:relative;width:280px;height:160px;margin-bottom:15px}
+.plate{position:absolute;bottom:0;left:-25px;width:330px;height:22px;border-radius:50%;background:linear-gradient(#eee,#aaa);box-shadow:0 8px 15px #0008}
+.layer{position:absolute;left:0;width:280px;border-radius:14px 14px 20px 20px;box-shadow:inset 0 -8px #00000015}
+.layer-bottom{bottom:20px;height:75px;background:linear-gradient(90deg,#a94b67,#e98ca4,#a94b67)}
+.layer-top{bottom:88px;height:65px;background:linear-gradient(90deg,#f4b7c5,#ffe0e7,#e99aaf);width:245px;left:17px}
+.icing{position:absolute;bottom:130px;left:17px;width:245px;height:25px;background:#fff0e8;border-radius:50% 50% 10px 10px}
+.drip{position:absolute;top:13px;width:17px;height:26px;border-radius:0 0 12px 12px;background:#fff0e8}.drip:nth-child(1){left:40px;height:34px}.drip:nth-child(2){left:95px;height:22px}.drip:nth-child(3){left:160px;height:31px}.drip:nth-child(4){left:210px;height:20px}
+.candle{position:absolute;bottom:151px;left:50%;transform:translateX(-50%);width:13px;height:55px;border-radius:5px 5px 2px 2px;background:repeating-linear-gradient(135deg,#fff 0 7px,#ff6d99 7px 14px);z-index:3}
+.flame{position:absolute;top:-25px;left:1px;width:12px;height:21px;background:radial-gradient(ellipse at 50% 70%,#fff8a8 0 20%,#ffb52e 45%,#ff5d25 75%);border-radius:50% 50% 45% 45%;transform-origin:50% 100%;animation:flicker .7s infinite alternate;box-shadow:0 0 22px #ffad35}
+@keyframes flicker{to{transform:rotate(8deg) scale(.88);filter:brightness(1.2)}}
+.cake.blown .flame{display:none}
+.blow-hint{font-size:13px;color:var(--muted);margin:8px 0 22px}
+.reveal{opacity:0;transform:translateY(15px);transition:.7s;pointer-events:none}
+.reveal.show{opacity:1;transform:translateY(0)}
+.reveal h2{font:800 clamp(36px,6vw,66px) 'Playfair Display',serif;color:var(--pink);margin:10px 0}
+.reveal p{color:#e7dce8;line-height:1.7}
+footer{text-align:center;padding:25px;color:#8e8492;border-top:1px solid #ffffff12;font-size:12px;letter-spacing:1px}
+.sparkle{position:fixed;pointer-events:none;z-index:10;font-size:20px;animation:float 2.8s ease-in forwards}
+@keyframes float{from{opacity:1;transform:translateY(0) rotate(0)}to{opacity:0;transform:translateY(-160px) rotate(180deg)}}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:120px 7% 50px}.hero-photo{height:390px;max-width:480px;width:100%;margin:auto}.gallery{grid-template-columns:1fr 1fr}.gallery figure{height:240px;margin:0!important}.gallery figure:last-child{display:none}nav span:last-child{font-size:10px}}
+@media(max-width:480px){.gallery{grid-template-columns:1fr}.gallery figure{height:260px}.gallery figure:last-child{display:block}}
+</style>
+</head>
+<body>
+<nav><div class="logo">STRONGER • TOGETHER</div><span>A LITTLE BIRTHDAY SURPRISE</span></nav>
+<main>
+<header class="hero">
+ <div>
+  <div class="eyebrow">Celebrating an amazing trainer</div>
+  <h1>Happy Birthday,<em>Miss Mahi!</em></h1>
+  <p>To the coach who makes strength feel possible, progress feel exciting, and every small win worth celebrating. Today, the spotlight is all yours!</p>
+  <div class="hero-actions"><button class="btn btn-primary" onclick="document.querySelector('#birthday').scrollIntoView({behavior:'smooth'})">Make a birthday wish ✨</button><button class="btn btn-ghost" onclick="document.querySelector('#message').scrollIntoView({behavior:'smooth'})">A little thank you</button></div>
+ </div>
+ <div class="hero-photo"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1100&q=85" alt="Beautiful modern gym"><div class="photo-tag"><strong>Stronger every day</strong>One rep, one step, one victory at a time.</div></div>
+</header>
+<section id="message">
+ <div class="section-head"><div class="eyebrow">More than a workout</div><h2>Thank you for being my motivation</h2><p>Every bit of progress has a story — and you've been part of mine.</p></div>
+ <div class="gallery">
+  <figure><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=85" alt="Athlete training in the gym"><figcaption>Strength in every step</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=85" alt="Personal training session"><figcaption>Progress, not perfection</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=900&q=85" alt="Fitness training"><figcaption>Keep inspiring!</figcaption></figure>
+ </div>
+ <div class="note"><p>Miss Mahi, thank you for your constant support, patience, and encouragement. You've helped me become healthier, more confident, and better in my own body. Your guidance has made such a difference in my weight-loss journey, and I'm truly grateful for every push, every correction, and every word of motivation. <strong>You don't just train bodies — you build confidence.</strong></p></div>
+</section>
+<section class="birthday" id="birthday">
+ <div class="eyebrow">Make a wish, Miss Mahi!</div>
+ <div class="section-head"><h2>A birthday cake just for you 🎂</h2><p>Take a breath, make a wish, and blow out the candle!</p></div>
+ <div class="cake-stage"><div class="cake" id="cake"><div class="candle"><div class="flame"></div></div><div class="icing"><i class="drip"></i><i class="drip"></i><i class="drip"></i><i class="drip"></i></div><div class="layer layer-top"></div><div class="layer layer-bottom"></div><div class="plate"></div></div></div>
+ <div class="blow-hint">Tap the candle or press the button to blow it out 💨</div>
+ <button class="btn btn-primary" id="blowBtn">Blow the candle 💨</button>
+ <div class="reveal" id="reveal"><h2>HAPPY BIRTHDAY, MISS MAHI!</h2><p>May your year be as strong, beautiful, and inspiring as you are. Keep shining and keep changing lives! 💗</p></div>
+</section>
+</main>
+<footer>MADE WITH LOTS OF GRATITUDE & LOVE • HAPPY BIRTHDAY, MISS MAHI</footer>
+<script>
+const cake=document.getElementById('cake'), reveal=document.getElementById('reveal'), btn=document.getElementById('blowBtn');
+let celebrated=false;
+function celebrate(){
+ if(celebrated)return; celebrated=true;
+ cake.classList.add('blown'); reveal.classList.add('show'); btn.textContent='Wish made! 💖'; btn.disabled=true;
+ for(let i=0;i<34;i++){const s=document.createElement('span');s.className='sparkle';s.textContent=['✨','💖','🎉','⭐','💕'][Math.floor(Math.random()*5)];s.style.left=Math.random()*100+'vw';s.style.top=(35+Math.random()*55)+'vh';s.style.animationDelay=Math.random()*.8+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),3500)}
+}
+btn.addEventListener('click',celebrate);cake.addEventListener('click',celebrate);
+</script>
+</body>
+</html>
